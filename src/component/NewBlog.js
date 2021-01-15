@@ -45,7 +45,7 @@ function NewBlog() {
         let element = (
                 <>
                         <Row className="mt-5">
-                                <Col sm={{ span: 4, offset: 4 }}>
+                                <Col sm={{ span: 8, offset: 2}} sm={{ span: 4, offset: 4 }}>
                                         <span >
                                                 <Form className="p-4 ">
                                                         <Form.Group controlId="exampleForm.ControlInput1">
