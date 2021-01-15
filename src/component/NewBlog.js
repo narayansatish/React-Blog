@@ -1,4 +1,4 @@
-import React, { useState} from 'react';
+import React, { useState } from "react";
 import {
         BrowserRouter as Router,
         Switch,
@@ -18,107 +18,170 @@ import {
         Col,
 } from "react-bootstrap";
 function NewBlog() {
-        let [title,setTitle]=useState("");
-        let [author,setAuthor]=useState("");
-        let [category,setCategory]=useState("");
-        let [content,setContent]=useState("");
-        const publishNow=()=>{
+        let [title, setTitle] = useState("");
+        let [author, setAuthor] = useState("");
+        let [category, setCategory] = useState("");
+        let [content, setContent] = useState("");
+        const publishNow = () => {
                 console.log(title);
                 console.log(author);
                 console.log(category);
                 console.log(content);
-                let post={
-                        "title":title,
-                        "author":author,
-                        "category":category,
-                        "content":content,
-                        "date": (new Date().toLocaleDateString())
-
+                let post = {
+                        title: title,
+                        author: author,
+                        category: category,
+                        content: content,
+                        date: new Date().toLocaleDateString(),
                 };
-                post=JSON.stringify(post);
+                post = JSON.stringify(post);
                 console.log(post);
 
                 setTitle("");
                 setAuthor("");
                 setCategory("");
                 setContent("");
-
         };
         let element = (
                 <>
                         <Row className="mt-5">
                                 <Col sm={{ span: 4, offset: 4 }}>
                                         <span >
-                                        <Form>
-                                                <Form.Group controlId="exampleForm.ControlInput1">
-                                                        <Form.Label>
-                                                                Title
-                                                        </Form.Label>
-                                                        <Form.Control
-                                                                type="text"
-                                                                placeholder="Title"
-                                                                value={title}
-                                                                onChange={(e)=>{setTitle(e.target.value)}}
-                                                        />
-                                                </Form.Group>
-                                                <Form.Group controlId="exampleForm.ControlSelect1">
-                                                        <Row>
-                                                                <Col>
-                                                                        <Form.Group controlId="exampleForm.ControlInput1">
+                                                <Form className="p-4 ">
+                                                        <Form.Group controlId="exampleForm.ControlInput1">
+                                                                <Form.Label>
+                                                                        Title
+                                                                </Form.Label>
+                                                                <Form.Control
+                                                                        type="text"
+                                                                        placeholder="Title"
+                                                                        value={
+                                                                                title
+                                                                        }
+                                                                        onChange={(
+                                                                                e
+                                                                        ) => {
+                                                                                setTitle(
+                                                                                        e
+                                                                                                .target
+                                                                                                .value
+                                                                                );
+                                                                        }}
+                                                                />
+                                                        </Form.Group>
+                                                        <Form.Group controlId="exampleForm.ControlSelect1">
+                                                                <Row>
+                                                                        <Col>
+                                                                                <Form.Group controlId="exampleForm.ControlInput1">
+                                                                                        <Form.Label>
+                                                                                                Author
+                                                                                        </Form.Label>
+                                                                                        <Form.Control
+                                                                                                type="text"
+                                                                                                placeholder="Post Author"
+                                                                                                value={
+                                                                                                        author
+                                                                                                }
+                                                                                                onChange={(
+                                                                                                        e
+                                                                                                ) => {
+                                                                                                        setAuthor(
+                                                                                                                e
+                                                                                                                        .target
+                                                                                                                        .value
+                                                                                                        );
+                                                                                                }}
+                                                                                        />
+                                                                                </Form.Group>
+                                                                        </Col>
+                                                                        <Col>
                                                                                 <Form.Label>
-                                                                                        
-                                                                                        Author
+                                                                                        Category
                                                                                 </Form.Label>
                                                                                 <Form.Control
-                                                                                        type="text"
-                                                                                        placeholder="Post Author"
-                                                                                        value={author}
-                                                                                        onChange={(e)=>{setAuthor(e.target.value)}}
-                                                                                />
-                                                                        </Form.Group>
-                                                                </Col>
-                                                                <Col>
-                                                                        <Form.Label>
-                                                                                Category
-                                                                        </Form.Label>
-                                                                        <Form.Control as="select" value={category} onChange={(e)=>{setCategory(e.target.value)}}>
-                                                                                <option>
-                                                                                        Redux
-                                                                                </option>
-                                                                                <option>
-                                                                                        React
-                                                                                </option>
-                                                                                <option>
-                                                                                        Udacity
-                                                                                </option>
-                                                                        </Form.Control>
-                                                                </Col>
-                                                        </Row>
-                                                </Form.Group>
+                                                                                        as="select"
+                                                                                        value={
+                                                                                                category
+                                                                                        }
+                                                                                        onChange={(
+                                                                                                e
+                                                                                        ) => {
+                                                                                                setCategory(
+                                                                                                        e
+                                                                                                                .target
+                                                                                                                .value
+                                                                                                );
+                                                                                        }}
+                                                                                >
+                                                                                        <option>
+                                                                                                Redux
+                                                                                        </option>
+                                                                                        <option>
+                                                                                                React
+                                                                                        </option>
+                                                                                        <option>
+                                                                                                Udacity
+                                                                                        </option>
+                                                                                </Form.Control>
+                                                                        </Col>
+                                                                </Row>
+                                                        </Form.Group>
 
-                                                <Form.Group controlId="exampleForm.ControlTextarea1">
-                                                        <Form.Label>
-                                                                Post Content
-                                                        </Form.Label>
-                                                        <Form.Control
-                                                                as="textarea"
-                                                                rows={3}
-                                                                value={content}
-                                                                onChange={(e)=>{setContent(e.target.value)}}
-                                                        />
-                                                </Form.Group>
-                                                <Button variant="primary" onClick={publishNow}>Publish Now</Button>
-                                        </Form>
+                                                        <Form.Group controlId="exampleForm.ControlTextarea1">
+                                                                <Form.Label>
+                                                                        Post
+                                                                        Content
+                                                                </Form.Label>
+                                                                <Form.Control
+                                                                        as="textarea"
+                                                                        rows={3}
+                                                                        value={
+                                                                                content
+                                                                        }
+                                                                        onChange={(
+                                                                                e
+                                                                        ) => {
+                                                                                setContent(
+                                                                                        e
+                                                                                                .target
+                                                                                                .value
+                                                                                );
+                                                                        }}
+                                                                />
+                                                        </Form.Group>
+                                                        <Button
+                                                                variant="primary"
+                                                                onClick={
+                                                                        publishNow
+                                                                }
+                                                        >
+                                                                Publish Now
+                                                        </Button>
+                                                </Form>
                                         </span>
                                 </Col>
                         </Row>
-                        <Row className="mb-5 fixed-bottom d-flex">
-                                <Col md={{ span: 1, offset: 11 }}>
+                        <Row className="mb-5 mt-5 fixed-bottom ">
+                                <Col xs={{ span: 1, offset: 10 }} sm={{ span: 1, offset: 10 }} md={{ span: 1, offset: 10 }} lg={{ span: 1, offset: 11 }}>
                                         <Link to="/">
                                                 <svg
                                                         xmlns="http://www.w3.org/2000/svg"
-                                                        width="64"
-                                                        height="64"
+                                                        xs={{
+                                                                height: 16,
+                                                                width: 16,
+                                                        }}
+                                                        sm={{
+                                                                height: 24,
+                                                                width: 24,
+                                                        }}
+                                                        md={{
+                                                                height: 32,
+                                                                width: 32,
+                                                        }}
+                                                        lg={{
+                                                                height: 40,
+                                                                width: 40,
+                                                        }}
                                                         fill="red"
                                                         class="bi bi-house-fill"
                                                         viewBox="0 0 16 16"
