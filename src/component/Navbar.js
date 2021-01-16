@@ -23,7 +23,7 @@ function NavBar() {
         let nav = (
                 <div>
                         <Row className="nav-wrapper red ">
-                                <Col lg={12}>
+                                <Col >
                                         <Navbar
                                                 bg="danger"
                                                 variant="light"
@@ -34,7 +34,7 @@ function NavBar() {
                                                         <Link
                                                                 to="/"
                                                                 className=" text-light"
-                                                                
+
                                                         >
                                                                 React-Blog
                                                         </Link>
@@ -70,7 +70,7 @@ function NavBar() {
                                 </Col>
                         </Row>
 
-                      
+
                 </div>
         );
         return nav;

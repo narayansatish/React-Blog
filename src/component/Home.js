@@ -22,7 +22,10 @@ import BlogCard from "./BlogCard";
 function Home() {
         return (
                 <div>
-                        <Row className="mb-5 fixed-bottom d-flex">
+                        <Row>
+                                <BlogCard />
+                        </Row>
+                        <Row className="mb-5 fixed-bottom ">
                                 <Col
                                         xs={{ span: 1, offset: 10 }}
                                         sm={{ span: 1, offset: 10 }}
@@ -34,18 +37,18 @@ function Home() {
                                                         xmlns="http://www.w3.org/2000/svg"
                                                         fill="red"
                                                         className=" bi bi-plus-circle "
-                                                        viewBox="0 0 16 16"
+                                                        viewBox="0 0 32 32"
                                                         xs={{
-                                                                height: 16,
-                                                                width: 16,
+                                                                height: 64,
+                                                                width: 64,
                                                         }}
                                                         sm={{
-                                                                height: 24,
-                                                                width: 24,
+                                                                height: 64,
+                                                                width: 64,
                                                         }}
                                                         md={{
-                                                                height: 32,
-                                                                width: 32,
+                                                                height: 64,
+                                                                width: 64,
                                                         }}
                                                         lg={{
                                                                 height: 40,
@@ -58,9 +61,7 @@ function Home() {
                                         </Link>
                                 </Col>
                         </Row>
-                        <Row className="mt-5">
-                                <BlogCard />
-                        </Row>
+
 
                 </div>
         );

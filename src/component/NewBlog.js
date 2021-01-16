@@ -45,7 +45,7 @@ function NewBlog() {
         let element = (
                 <>
                         <Row className="mt-5">
-                                <Col xs={{ span: 6, offset: 3}} sm={{ span: 4, offset: 4 }}>
+                                <Col xs={{ span: 6, offset: 3 }} sm={{ span: 4, offset: 4 }}>
                                         <span >
                                                 <Form className="p-4 ">
                                                         <Form.Group controlId="exampleForm.ControlInput1">
@@ -167,16 +167,16 @@ function NewBlog() {
                                                 <svg
                                                         xmlns="http://www.w3.org/2000/svg"
                                                         xs={{
-                                                                height: 16,
-                                                                width: 16,
+                                                                height: 64,
+                                                                width: 64,
                                                         }}
                                                         sm={{
-                                                                height: 24,
-                                                                width: 24,
+                                                                height: 64,
+                                                                width: 64,
                                                         }}
                                                         md={{
-                                                                height: 32,
-                                                                width: 32,
+                                                                height: 64,
+                                                                width: 64,
                                                         }}
                                                         lg={{
                                                                 height: 40,
