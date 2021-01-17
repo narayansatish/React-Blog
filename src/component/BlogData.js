@@ -4,6 +4,7 @@ export const BlogData = {
         title: "ReactJs is Wonderdul",
         author: "sn",
         tag: "js,html",
+        description: "Wonderful Article",
         content:
             "React Server Components are still in research and development.We are sharing this work in the spirit of transparency and to get initial feedback from the React community.There will be plenty of time for that, so don’t feel like you have to catch up right now!",
         date: "11/10/20",
@@ -12,6 +13,7 @@ export const BlogData = {
         id: "2",
         title: "JavaScript  is Wonderdul",
         author: "AN",
+        description: "Wonderful Article",
         tag: "js,css",
         content:
             "In this fun article we'll take a look at the amazing JS13K game challenge. It is an annual coding competition",
@@ -22,6 +24,7 @@ export const BlogData = {
         title: "Coding Is Beautiful",
         author: "Powwel",
         tag: "coding,C,C++",
+        description: "Wonderful Article",
         content:
             "Coding runs the world as we know it, but the vast majority of people aren’t even aware of its existenceIn this fun article we'll take a look at the amazing JS13K game challenge. It is an annual coding competition,Coding runs the world as we know it, but the vast majority of people aren’t even aware of its existence",
         date: "25/08/19",
@@ -31,6 +34,7 @@ export const BlogData = {
         title: "Hello world",
         author: "hacker",
         tag: "js,css",
+        description: "Wonderful Article",
         content:
             "Hey World!In this fun article we'll take a look at the amazing JS13K game challenge. It is an annual coding competition",
         date: "13/10/20",

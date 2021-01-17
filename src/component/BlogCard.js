@@ -25,7 +25,7 @@ const BlogCard = () => {
     let blogDataJsx = [];
     for (const [key, value] of Object.entries(BlogData)) {
         blogDataJsx.push(
-            <Col sm={{ span: 4, offset: 4 }}>
+            <Col sm={{ span: 6, offset: 3 }}>
                 <Row className="mt-5">
                     <Col >
                         <Accordion>
